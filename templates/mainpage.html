@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U Search</title>
+    <!-- <link rel="stylesheet" href="Style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='Style.css') }}">
+</head>
+<body>
+    <h1 class="M_h1">U Search</h1>
+    <div class="M_input">
+        <form action="" method="post">
+            <input type="text" name="keyword" id="keyword" class="M_blank">
+            <input type="submit" name="searchbtn" value="검색" class="M_searchbtn">
+        </form>
+    </div>
+    <div class="M_mv">
+        <!-- <button type="button" class="M_mvbtn" onclick="location.href='./login.html'">로그인</button> -->
+        <!-- <button type="button" class="M_mvbtn" onclick="location.href='./registerpage.html'">회원가입</button> -->
+        <a href="logout"><button type="submit" name="logout" value="logout" class="M_mvbtn">로그아웃</button></a>
+        <a href="../preference"><button type="submit" name="preference" value="preference" class="M_mvbtn">선호사항</button></a>
+        <a href="../correct_information"><button type="submit" name="information" value="information" class="M_mvbtn">정보수정</button></a>
+    </div>
+</body>
+</html>

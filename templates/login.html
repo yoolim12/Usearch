@@ -1,0 +1,55 @@
+{%with messages = get_flashed_messages()%}
+{%if messages %}
+    <script type="text/javascript">
+        alert("{{messages[-1]}}");
+    </script>
+{%endif%}
+{%endwith%}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U Search 로그인 페이지</title>
+    <!-- <link rel="stylesheet" href="Style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='Style.css') }}">
+</head>
+
+<body>
+    <h1>U Search</h1>
+    <div class="input">
+        <form action="" method="post">
+            <!-- 아이디 -->
+            <h3>
+            <label for="id">아이디</label>
+            </h3>
+            <span>
+            <input id="id" type="text" class="L_blank" maxlength="20" name="id">
+            </span>
+            
+            <!-- 비밀번호 -->
+            <h3>
+                <label for="password">비밀번호</label>
+            </h3>
+            <span>
+            <input id="password" type="password" class="L_blank" maxlength="20" name="password">
+            </span>
+            
+            <!-- Submit -->
+            <button type="submit" name="login" value="login" class="L_btn">로그인</button>
+            <!-- <button type="button" class="L_btn" onclick="location.href='./registerpage.html'">회원가입</button> -->
+            <a href="register"><button type="submit" name="register" value="register" class="L_btn">회원가입</button></a>
+
+            <!-- {%with messages = get_flashed_messages()%}
+        {%if messages %}
+            <script>
+                alert("{{messages[-1]}}");
+            </script>
+        {%endif%}
+    {%endwith%} -->
+        </form>
+    </div>
+</body>
+</html>

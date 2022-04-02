@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 결과</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Style.css') }}">
+</head>
+<body>
+    <div>
+        <a href="mainpage" class="S_link">
+            <i>U Search</i>
+        </a>
+        <form action="" method="get" name="form">
+            <div class="S_input">
+                <input type="text" class="S_blank" name="keyword" id="keyword" value={{keyword}} maxlength="255" autocapitalize="off" role="combobox">
+                <input type="submit" name="search" value="검색" class="S_btn">
+            </div>
+        </form>
+    </div>
+    <div id="result" class="S_result">
+        
+    </div>
+    <!-- <form action="" method="get">
+        <script>
+            
+            var result = document.getElementById("result");
+            for(i=0; i<list.length; i++){
+                var p = document.createElement("p");
+                var a = document.createElement("a");
+                
+                result.appendChild(p);
+                p.appendChild(a);
+                var text = document.createTextNode(title[i]);
+                a.appendChild(text);
+                a.href=list[i];
+            }
+        </script>
+    </form> -->
+
+    <script>
+        var list = {{ link|safe }};
+        var image_url = {{ thumbnailUrl|safe}};
+        var title = {{ title|safe}};
+        var contents = {{ description|safe}};
+        var result = document.getElementById("result");
+
+        for(i=0; i<list.length; i++){
+            var div = document.createElement("div");
+            var diva = document.createElement("div");
+            var divp = document.createElement("div");
+            var divi = document.createElement("div");
+            var p = document.createElement("p");
+            var a = document.createElement("a");
+            var image = document.createElement("img")
+            var text1 = document.createTextNode(title[i]);
+            
+            result.appendChild(div);
+            div.appendChild(diva);
+            div.appendChild(divp);
+            div.appendChild(divi);
+            diva.appendChild(a);
+            divp.appendChild(p);
+            divi.appendChild(image);
+            a.target = "_blank"
+            image.height = "75"
+            image.width = "130"
+            div.className = "S_part";
+            divp.className = "S_divp"
+            diva.className = "S_diva"
+            p.className = "S_P";
+            image.className = "S_I";
+            a.className = "S_A"
+
+            p.innerText = contents[i];
+            a.innerText = title[i];
+            a.href = list[i];
+            image.src = image_url[i];
+
+            
+
+            
+            
+            
+            
+        }
+    </script>
+
+    
+</body>
+</html>

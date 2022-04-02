@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Style.css') }}">
+    <title>선호사항 설정</title>
+</head>
+<body>
+    <h1>U Search</h1>
+    <h2>선호사항 설정</h2>
+    
+    <form action="" method="post">
+        <div id="prefer" class="input">
+            <div id="confirm" class="P_confirm">
+                <h3>현재 선호사항</h3>
+                <ul id="check_on">
+
+                </ul>
+            </div>
+            <p class="P_caution">(※ 3개를 선택해주세요.)</p>
+            <p>            
+                <label for="1" class="P_checkbox_label">① 문학/책</label>
+                <input id="1" type="checkbox" class="checkbox_input" value="문학/책" name="options">
+                <label for="2" class="P_checkbox_label">② 영화</label>
+                <input id="2" type="checkbox" class="checkbox_input" value="영화" name="options">
+                <label for="3" class="P_checkbox_label">③ 미술/디자인</label>
+                <input id="3" type="checkbox" class="checkbox_input" value="미술/디자인" name="options">
+                <label for="4" class="P_checkbox_label">④ 공연/전시</label>
+                <input id="4" type="checkbox" class="checkbox_input" value="공연/전시" name="options">
+            </p>
+            <p>
+                <label for="5" class="P_checkbox_label">⑤ 음악</label>
+                <input id="5" type="checkbox" class="checkbox_input" value="음악" name="options">
+                <label for="6" class="P_checkbox_label">⑥ 드라마</label>
+                <input id="6" type="checkbox" class="checkbox_input" value="드라마" name="options">
+                <label for="7" class="P_checkbox_label">⑦ 스타/연예인</label>
+                <input id="7" type="checkbox" class="checkbox_input" value="스타/연예인" name="options">
+                <label for="8" class="P_checkbox_label">⑧ 만화/애니</label>
+                <input id="8" type="checkbox" class="checkbox_input" value="만화/애니" name="options">
+            </p>
+            <p>
+                <label for="9" class="P_checkbox_label">⑨ 방송</label>
+                <input id="9" type="checkbox" class="checkbox_input" value="방송" name="options">
+                <label for="10" class="P_checkbox_label">⑩ 일상/생각</label>
+                <input id="10" type="checkbox" class="checkbox_input" value="일상/생각" name="options">
+                <label for="11" class="P_checkbox_label">⑪ 육아/결혼</label>
+                <input id="11" type="checkbox" class="checkbox_input" value="육아/결혼" name="options">
+                <label for="12" class="P_checkbox_label">⑫ 애완/반려동물</label>
+                <input id="12" type="checkbox" class="checkbox_input" value="애완/반려동물" name="options">
+            </p>
+            <p>
+                <label for="13" class="P_checkbox_label">⑬ 좋은글/이미지</label>
+                <input id="13" type="checkbox" class="checkbox_input" value="좋은글/이미지" name="options">
+                <label for="14" class="P_checkbox_label">⑭ 패션/미용</label>
+                <input id="14" type="checkbox" class="checkbox_input" value="패션/미용" name="options">
+                <label for="15" class="P_checkbox_label">⑮ 인테리어/DIY</label>
+                <input id="15" type="checkbox" class="checkbox_input" value="인테리어/DIY" name="options">
+                <label for="16" class="P_checkbox_label">⑯ 요리/레시피</label>
+                <input id="16" type="checkbox" class="checkbox_input" value="요리/레시피" name="options">
+            </p>
+            <p>
+                <label for="17" class="P_checkbox_label">⑰ 상품리뷰</label>
+                <input id="17" type="checkbox" class="checkbox_input" value="상품리뷰" name="options">
+                <label for="18" class="P_checkbox_label">⑱ 원예/재배</label>
+                <input id="18" type="checkbox" class="checkbox_input" value="원예/재배" name="options">
+                <label for="19" class="P_checkbox_label">⑲ 게임</label>
+                <input id="19" type="checkbox" class="checkbox_input" value="게임" name="options">
+                <label for="20" class="P_checkbox_label">⑳ 스포츠</label>
+                <input id="20" type="checkbox" class="checkbox_input" value="스포츠" name="options">
+            </p>
+            <p>
+                <label for="21" class="P_checkbox_label">㉑ 사진</label>
+                <input id="21" type="checkbox" class="checkbox_input" value="사진" name="options">
+                <label for="22" class="P_checkbox_label">㉒ 자동차</label>
+                <input id="22" type="checkbox" class="checkbox_input" value="자동차" name="options">
+                <label for="23" class="P_checkbox_label">㉓ 취미</label>
+                <input id="23" type="checkbox" class="checkbox_input" value="취미" name="options">
+                <label for="24" class="P_checkbox_label">㉔ 국내여행</label>
+                <input id="24" type="checkbox" class="checkbox_input" value="국내여행" name="options">
+            </p>
+            <p>
+                <label for="25" class="P_checkbox_label">㉕ 세계여행</label>
+                <input id="25" type="checkbox" class="checkbox_input" value="세계여행" name="options">
+                <label for="26" class="P_checkbox_label">㉖ 맛집</label>
+                <input id="26" type="checkbox" class="checkbox_input" value="맛집" name="options">
+                <label for="27" class="P_checkbox_label">㉗ IT/컴퓨터</label>
+                <input id="27" type="checkbox" class="checkbox_input" value="컴퓨터" name="options">
+                <label for="28" class="P_checkbox_label">㉘ 사회/정치</label>
+                <input id="28" type="checkbox" class="checkbox_input" value="사회/정치" name="options">
+            </p>
+            <p>
+                <label for="29" class="P_checkbox_label">㉙ 건강/의학</label>
+                <input id="29" type="checkbox" class="checkbox_input" value="건강/의학" name="options">
+                <label for="30" class="P_checkbox_label">㉚ 비즈니스/경제</label>
+                <input id="30" type="checkbox" class="checkbox_input" value="비즈니스/경제" name="options">
+                <label for="31" class="P_checkbox_label">㉛ 어학/외국어</label>
+                <input id="31" type="checkbox" class="checkbox_input" value="어학/외국어" name="options">
+                <label for="32" class="P_checkbox_label">㉜ 교육/학문</label>
+                <input id="32" type="checkbox" class="checkbox_input" value="교육/학문" name="options">
+            </p>
+            <input type="submit" name="pref_set" value="확인" class="P_btn" onclick="if(checkcount()==false) return false">
+            <button type="submit" name="cancel" value = "cancel" class="P_btn" onclick="return true">취소</button>
+        </div>
+    </form>
+    <script>
+        function checkcount(){
+            var count = 0;
+            var chk = document.getElementsByName("options");
+            
+            
+            for(let i=0; i<32; i++){
+                if(chk[i].checked == true) count++;
+            }
+            if(count != 3) {
+                alert("3개를 선택해주세요.");
+                return false;
+            }
+            return true;
+        }
+
+
+        var number = {{pref_select}};
+        var conf = document.getElementById("check_on");
+            for(i=1; i<33; i++){
+                var num = document.getElementById(i);
+                for(j=0; j<number.length; j++){
+                    if(number[j] == i) num.checked = true;
+                }
+                if(num.checked == true){
+                    var li = document.createElement("li");
+                    check_on.appendChild(li);
+                    li.innerText = num.value;
+                    li.className = "P_checked"
+                }
+            }
+    </script>
+</body>
+</html>

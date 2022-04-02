@@ -1,0 +1,174 @@
+{%with messages = get_flashed_messages()%}
+{%if messages %}
+    <script type="text/javascript">
+        alert("{{messages[-1]}}");
+    </script>
+{%endif%}
+{%endwith%}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U Search 회원가입 페이지</title>
+    <!-- <link rel="stylesheet" href="Style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='Style.css') }}">
+</head>
+<body>
+    <h1>U Search</h1>
+    <div class="input">
+        <form action="" method="post">
+        
+            <!-- 아이디 -->
+            <h3>
+                <label for="id">아이디</label>
+            </h3>
+            <span>
+                <input id="id" type="text" class="R_blank" name="id" value={{exist_id}}>
+            </span>
+            <button type="submit" class="R_check" id="id_check" name="query_id_check" value='0'>중복 확인</button>
+            
+            <!-- 비밀번호 -->
+            <h3>
+                <label for="password">비밀번호</label>
+            </h3>
+            <span>
+                <input id="password" type="password" class="R_blank" name="password" onkeyup="PWcheck();">
+            </span>
+
+            <!-- 비밀번호 재확인 -->
+            <h3>
+                <label for="passwordcheck">비밀번호 재확인</label>
+            </h3>
+            <span>
+                <input id="passwordcheck" type="password" class="R_blank" name="passwordcheck" onkeyup="PWcheck();">
+            </span>
+
+            <!-- 비밀번호 일치 확인 메세지 -->
+            <span id="perrmsg" style="display: none;">비밀번호가 일치하지 않습니다.</span>
+            <span id="perrmsg2" style="display: none;">비밀번호가 일치합니다.</span>
+            
+            <!-- 이름 -->
+            <h3>
+                <label for="name">이름</label>
+            </h3>
+            <span>
+                <input id="name" type="text" class="R_blank" name="name">
+            </span>
+
+            <!-- 생년월일 -->
+            <h3>
+                <label for="birth">생년월일</label>
+            </h3>
+            <span>
+                <input id="birth" type="date" class="R_blank" name="birth">
+            </span>
+
+            <!-- 성별 -->
+            <h3>
+                <span>성별</span>
+            </h3>
+            <p>
+                <label for="male">남성 : </label>
+                <input id="male" type="radio" name="gender" value="남성" checked>
+                <label for="female">여성 : </label>
+                <input id="female" type="radio" name="gender" value="여성">
+            </p>
+
+            <!-- e-mail -->
+            <h3>
+                <label for="email">e-mail</label>
+            </h3>
+            <span>
+                <input id="email" type="email" class="R_blank" name="email">
+            </span>
+            
+
+            
+            <!-- Submit -->
+            <p>
+            <button type="submit" class="R_btn" value="query_regist" name="query_regist" onclick="if(SMerr() == false) return false;">회원가입</button>
+            <button type="submit" class="R_btn" value="cancel" name="cancel">취소</button>
+            </p>
+        </form>
+
+    <!-- {%with messages = get_flashed_messages()%}
+        {%if messages %}
+            <script type="text/javascript">
+                alert("{{messages[-1]}}");
+            </script>
+        {%endif%}
+    {%endwith%} -->
+
+    </div>
+    <script>
+        var id = "{{user_ids}}";
+        function PWcheck(){
+            var p1 = document.getElementById("password").value;
+            var p2 = document.getElementById("passwordcheck").value;
+
+            if(p1 != p2){
+                document.getElementById("perrmsg").style.display = 'block'
+                document.getElementById("perrmsg2").style.display = 'none'
+                return false;
+            }
+            else {
+                document.getElementById("perrmsg").style.display = 'none'
+                document.getElementById("perrmsg2").style.display = 'block'
+                return true;
+            }
+        }
+        // function IDcheck(){
+        //     var id_check = document.getElementById("id").value;
+            
+        //     if(id_check==""){
+        //         alert("아이디를 입력해주세요.")
+        //         return false;
+        //     }
+        //     else{
+        //         alert(id);
+        //         for(i=0; i<id.length; i++){
+        //             if(id[i] == id_check) {
+        //                 alert("중복 아이디입니다.");
+        //                 return false;
+        //             }
+        //         }
+        //     }
+        //     alert("사용 가능한 아이디입니다.")
+        //     return true;
+        // }
+        function SMerr(){
+            var id_check = document.getElementById("id").value;
+            var judge = true;
+            
+            // for(i=0; i<id.length; i++){
+            //     if(id[i] == id_check) {
+            //         judge = false;
+            //         break;
+            //     }
+            // }
+
+            if(document.getElementById("id").value == "" || document.getElementById("password").value == "" || document.getElementById("birth").value == "" || document.getElementById("name").value == "" || document.getElementById("email").value == ""){
+                alert("회원정보를 모두 입력해주세요.")
+                return false;
+            }
+
+            if(!(PWcheck())) {
+                alert("비밀번호 입력이 잘못되었습니다.");
+                return false;
+            }
+            // else if(!(judge)) {
+            //     alert("아이디가 중복되었습니다.");
+            //     return false;
+            // }
+            else{
+                alert("회원가입 되었습니다.");
+                return true;
+            }
+        }
+        
+    </script>
+</body>
+</html>

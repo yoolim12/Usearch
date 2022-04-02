@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Mogra&display=swap');
+
+/* 공통 */
+body{
+    background-color: rgb(213, 226, 178);
+}
+
+/* U-search */
+h1{
+    width:500px;
+    margin: 20px auto;
+    font-size: 60px;
+    font-family: 'Mogra', cursive;
+}
+
+h2{
+    width:500px;
+    margin:auto;
+    
+}
+
+/* 입력란 요구내용 */
+h3{
+    margin: 35px 0px 15px 0px;
+}
+
+/* 입력란 */
+.input{
+    width:600px;
+    padding: 5px 20px;
+    border: solid 10px rgb(189, 138, 105);
+    border-radius: 20px;
+    margin: auto;
+    
+    background-color: floralwhite;
+    font-size:20px;
+
+}
+
+/* 로그인 페이지 빈 칸 */
+.L_blank{
+    width: 90%;
+    height: 25px;
+    padding: 20px;
+    font-size: 22px;
+}
+
+/* 로그인 페이지 '로그인' 버튼, 회원가입 이동 버튼 */
+.L_btn{
+    width: 200px;
+    height: 40px;
+    margin: 40px;
+    border-radius: 10px;
+    font-size: 25px;
+    color:black;
+    background-color:rgb(189, 138, 105);
+}
+
+
+
+/* 회원가입 페이지 빈 칸 */
+.R_blank{
+    width: 80%;
+    height: 15px;
+    padding: 13px;
+    font-size: 15px;
+}
+
+/* 회원가입 페이지 '가입하기' 버튼 */
+.R_btn{
+    width: 200px;
+    height: 40px;
+    margin: 10px 200px;
+    border-radius: 10px;
+    font-size: 25px;
+    color: black;
+    background-color:rgb(189, 138, 105);
+}
+
+.R_check{
+    width: 90px;
+    height: 30;
+    border-radius: 5px;
+    font-size: 15px;
+    color: black;
+    background-color: rgb(189, 138, 105);
+}
+
+.M_h1{
+    width:500px;
+    margin: 200px auto 20px;
+    font-size: 60px;
+    font-family: 'Mogra', cursive;
+}
+
+.M_input{
+    width:600px;
+    padding: 5px 20px;
+    border: solid 10px rgb(189, 138, 105);
+    border-radius: 20px;
+    margin: auto;
+    
+    background-color: floralwhite;
+    font-size:20px;
+}
+
+.M_searchbtn{
+    border-radius: 5px;
+    font-size: 13px;
+    color: black;
+    background-color: rgb(189, 138, 105);
+}
+
+.M_blank{
+    width: 90%;
+    height: 25px;
+    border: 0;
+    background-color: floralwhite;
+}
+
+.M_btn{
+    width: 48px;
+    height: 30;
+    border-radius: 5px;
+    font-size: 13px;
+    color: black;
+    background-color: rgb(189, 138, 105);
+}
+
+.M_mv{
+    width: 100px;
+    border: solid 10px rgb(189, 138, 105);
+    border-radius: 20px;
+    padding: 5px 10px;
+    position: absolute;
+    right: 10%;
+    background-color: floralwhite;
+}
+
+.M_mvbtn{
+    width: 100%;
+    border-radius: 5px;
+    margin: 5px auto;
+    background-color: rgb(189, 138, 105);
+}
+
+/* 선호사항 페이지 */
+.P_checkbox_label{
+    font-size: 17px;
+}
+.P_caution{
+    font-size: 15px;
+    
+    margin:auto;
+    color: crimson;
+}
+.P_btn{
+    width: 150px;
+    height: 30px;
+    border-radius: 8px;
+    position: relative;
+    left: 105px;
+    margin: 0 20px;
+    font-size: 18px;
+    background-color: rgb(189, 138, 105);
+}
+.P_confirm{
+    background-color: rgb(21, 148, 89);
+    color: aliceblue;
+    border: solid 10px;
+    border-color: rgb(160, 45, 45);
+    padding: 7px;
+}
+
+/* 검색결과 페이지 */
+i{
+    position: relative;
+    left: 30px;
+    margin: 20px auto;
+    font-size: 50px;
+    font-family: 'Mogra', cursive;
+    color: black;
+    font-weight: bolder;
+}
+.S_blank{
+    background-color: floralwhite;
+    border: none;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    width: 530px;
+}
+.S_input{
+    width: 600px;
+    height: 30px;
+    padding: 10px;
+    margin: 20px;
+    border: solid 5px rgb(189, 138, 105);
+    border-radius: 20px;
+    background-color: floralwhite;
+    margin-top: -60px;
+    position: relative;
+    left: 240px;
+}
+
+.S_btn{
+    border-radius: 5px;
+    margin: 5px auto;
+    background-color: rgb(189, 138, 105);
+}
+
+.S_link{
+    text-decoration: none;
+}
+.S_result{
+    background-color: floralwhite;
+    width: 1000px;
+    border: solid 5px rgb(189, 138, 105);
+    border-radius: 20px;
+    padding: 20px;
+    
+}
+.S_part{
+    margin: 40px 0px;
+    background-color: white;
+}
+.S_P{
+    margin: auto;
+    display: -webkit-box;
+}
+.S_I{
+    position: relative;
+    left: 80%;
+    margin-top: -40px;
+}
+.S_A{
+    font-size: 30px;
+    text-decoration: none;
+    display: -webkit-box;
+}
+.S_diva{
+    width: 750px;
+}
+.S_divp{
+    width: 750px;
+}
